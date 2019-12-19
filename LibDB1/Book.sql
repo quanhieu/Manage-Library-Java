@@ -1,0 +1,30 @@
+USE [LibDB]
+GO
+
+/****** Object:  Table [dbo].[Book]    Script Date: 1/18/2018 10:00:02 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Book](
+	[CallNumber] [int] IDENTITY(1,1) NOT NULL,
+	[ISBN] [varchar](50) NULL,
+	[Title] [varchar](50) NULL,
+	[Author] [varchar](50) NULL,
+ CONSTRAINT [PK_Book] PRIMARY KEY CLUSTERED 
+(
+	[CallNumber] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
